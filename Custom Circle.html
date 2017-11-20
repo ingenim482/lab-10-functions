@@ -1,0 +1,59 @@
+<html>
+<head> 
+	<title></title>
+</head>
+<body onload="draw()">
+<canvas id ="sketch" width="500" height="500">
+</canvas>
+<script>
+
+function draw () {
+	//your drawing goes here 
+	var sketch = document.getElementById('sketch');
+	var context = sketch.getContext("2d")
+
+var Color = prompt(" What color would you like your circle to be? (Hint:You may only use RBGY on this program)");
+var Radius = prompt("On a scale of 50-100 how cool are you?")
+Radius_1 = parseInt (Radius, 10);
+
+if (Color == "Red"){
+
+context.fillStyle = "#FF0000"
+	context.beginPath();
+	context.arc(100,100,Radius_1, 0, 2 * Math.PI, true);
+	context.closePath();
+	context.fill();
+
+
+}
+else if (Color == "Blue"){
+
+context.fillStyle = "#0000FF"
+	context.beginPath();
+	context.arc(100,100,Radius_1, 0, 2 * Math.PI, true);
+	context.closePath();
+	context.fill();
+
+}
+else if (Color == "Green"){
+
+context.fillStyle = "#00FF00"
+	context.beginPath();
+	context.arc(100,100,Radius_1, 0, 2 * Math.PI, true);
+	context.closePath();
+	context.fill();
+
+}
+else if (Color == "Yellow"){ 
+context.fillStyle = "#FFFF00"
+	context.beginPath();
+	context.arc(100,100,Radius_1, 0, 2 * Math.PI, true);
+	context.closePath();
+	context.fill();
+}
+else 
+	console.log (" RGBY = Red Green Ble Yellow, c'mon m8")
+}
+</script>
+</body>
+</html>
